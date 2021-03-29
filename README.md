@@ -3,6 +3,9 @@ Essa aplicação Java-Web de gerenciamento de dados foi implementada como requis
 
 ## Programas, aplicações, bibliotecas e dependencias utilizadas
 
+### [Java-8.0](https://www.java.com/pt-BR/download/help/whatis_java.html)
+Java é uma linguagem de programação utilizada
+
 ### [Maven](https://maven.apache.org/index.html)
 Gerenciador de projetos que ajuda o desenvolvedor com o controle e manejamento das:
 -> *Dependencias*
