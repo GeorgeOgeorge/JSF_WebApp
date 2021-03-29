@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Controle de Funcionarios</title>
+</h:head>
+
+<h:body>
+	<ui:include src="BarraNavegacao.xhtml" />
+	<p:panel header="Gerencia de funcionarios">
+		<h:form id="formAdicionarFuncionario">
+			<p:messages closable="true">
+				<p:autoUpdate />
+			</p:messages>
+
+			<h:panelGrid id="gridAdicionar" columns="2">
+				<p:outputLabel value="nome do funcionario: " />
+				<p:inputText value="#{funcionarioBean.funcionario.nome}" size="30"
+					maxlength="50" />
+
+				<p:outputLabel value="telefone do funcionario: " />
+				<p:inputText value="#{funcionarioBean.funcionario.telefone}"
+					size="8" maxlength="9" required="true"
+					requiredMessage="Informar telefone do funcionario" />
+			</h:panelGrid>
+
+			<h:panelGrid columns="3">
+				<p:commandButton
+					actionListener="#{funcionarioBean.cadastrarFuncionario}"
+					value="enviar"
+					update="formAdicionarFuncionario :formTabelaFuncionarios:tabelaFuncionarios" />
+
+				<p:commandButton value="Excluir"
+					actionListener="#{funcionarioBean.removerFuncionario()}"
+					update=":formTabelaFuncionarios:tabelaFuncionarios" />
+
+				<p:commandButton value="Editar"
+					actionListener="#{funcionarioBean.alterarFuncionario()}"
+					update=":formTabelaFuncionarios:tabelaFuncionarios :formAdicionarFuncionario:gridAdicionar" />
+			</h:panelGrid>
+		</h:form>
+
+		<h:form id="formTabelaFuncionarios">
+			<p:dataTable id="tabelaFuncionarios"
+				emptyMessage="Nenhum funcionario cadastrado" paginator="true"
+				value="#{funcionarioBean.funcionarios}" var="funcionarioAtual">
+				<p:column headerText="Código">
+					#{funcionarioAtual.idFuncionario}
+				</p:column>
+
+				<p:column headerText="Nome">
+					#{funcionarioAtual.nome}
+				</p:column>
+
+				<p:column headerText="Telefone">
+					#{funcionarioAtual.telefone}
+				</p:column>
+
+				<p:column headerText="Opções">
+					<p:commandButton value="Selecionar"
+						actionListener="#{funcionarioBean.buscarFuncionario(funcionarioAtual)}"
+						update=":formAdicionarFuncionario:gridAdicionar" />
+
+					<p:commandButton value="Concluir" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
+	</p:panel>
+</h:body>
+
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- configuração de persistencia -->
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+	version="2.2">
+
+	<!-- condifuração da unidade de persistencia do projeto -->
+	<persistence-unit name="DesafioPU">
+		<description>
+			Unidade de persistencia para o projeto
+		</description>
+
+		<!-- classe que representa o provedor da classe -->
+		<provider> org.hibernate.jpa.HibernatePersistenceProvider </provider>
+
+		<!-- propriedades -->
+		<properties>
+			<!-- driver do banco a ser utilizado -->
+			<property name="javax.persistence.jdbc.driver"
+				value="org.postgresql.Driver" />
+			<!-- url para acesar o banco -->
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:postgresql://localhost/gestaoTarefasDB" />
+			<!-- usuario para entrar no banco -->
+			<property name="javax.persistence.jdbc.user"
+				value="postgres" />
+			<!-- senha para autenticar na conexao(sim, ta facil) -->
+			<property name="javax.persistence.jdbc.password" value="123" />
+			<!-- dialeto para que o fazer a conversa em POO -->
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.PostgreSQL10Dialect" />
+			<!-- ajuda na exibição do log do SQL -->
+			<property name="hibernate.show_sql" value="true" />
+			<!-- ajuda na formatação do log do SQL -->
+			<property name="hibernate.format_sql" value="true" />
+			<!-- define que o banco deve ser criado ou manipulado -->
+			<property name="hibernate.hbm2ddl.auto" value="validate"/>
+		</properties>
+	</persistence-unit>
+
+</persistence>
