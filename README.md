@@ -23,14 +23,24 @@ Biblioteca que agiliza muitas das implementações que seriam realizadas
 ### [PrimeFaces](https://www.primefaces.org/)
 O PrimeFaces é uma biblioteca de componentes de interface de usuário de código-fonte aberto para aplicativos baseados em JavaServer Faces
 
-### dependencias utilizadas (https://github.com/GeorgeOgeorge/Projeto_Esig/blob/master/pom.xml)
--> hibernate-core 5.4.12.Final
--> postgresql 42.2.19
--> junit 4.13.2
--> lombok 1.18.18
--> javax.faces 2.4.0
--> primefaces 8.0
--> weld-servlet-core 3.1.4.Final
--> omnifaces 3.5
--> javax.validation validation-api 2.0.1.Final
--> hibernate-validator 6.0.13.Final
+### [dependencias utilizadas] (https://github.com/GeorgeOgeorge/Projeto_Esig/blob/master/pom.xml)
+-> hibernate-core 5.4.12.Final  
+
+-> postgresql 42.2.19  
+
+-> junit 4.13.2  
+
+-> lombok 1.18.18  
+
+-> javax.faces 2.4.0  
+
+-> primefaces 8.0  
+
+-> weld-servlet-core 3.1.4.Final  
+
+-> omnifaces 3.5  
+
+-> javax.validation validation-api 2.0.1.Final  
+
+-> hibernate-validator 6.0.13.Final  
+
