@@ -15,17 +15,17 @@
 
 <h:body>
 	<ui:include src="BarraNavegacao.xhtml" />
-	<p:panel header="Gerencia de Tarefas">
+	<p:panel header="Cadastro de tarefas">
 		<h:form id="formAdicionarTarefa">
 			<p:messages closable="true">
 				<p:autoUpdate />
 			</p:messages>
 
-			<h:panelGrid id="gridAdicionar" columns="6">
-				<p:outputLabel value="Titulo da tarefa: " />
+			<h:panelGrid id="gridAdicionar" columns="8">
+				<p:outputLabel value="Título da tarefa: " />
 				<p:inputText value="#{tarefaBean.tarefa.titulo}" maxlength="50" />
 
-				<p:outputLabel value="Descição da tarefa: " />
+				<p:outputLabel value="Descrição da tarefa: " />
 				<p:inputTextarea value="#{tarefaBean.tarefa.descricao}"
 					required="true" requiredMessage="Infomar descrição para tarefa" />
 
@@ -55,7 +55,7 @@
 			</h:panelGrid>
 
 			<p:panelGrid>
-				<p:commandButton value="enviar"
+				<p:commandButton value="Cadastrar"
 					actionListener="#{tarefaBean.cadastrarTarefa()}"
 					update="formAdicionarTarefa " />
 			</p:panelGrid>

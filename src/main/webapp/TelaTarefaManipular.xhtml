@@ -9,19 +9,19 @@
 
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<title>Gerenciar tarefa</title>
+	<title>Manipular tarefas</title>
 	<h:outputScript library="js" name="scriptLocalizacao.js" />
 </h:head>
 
 <h:body>
 	<ui:include src="BarraNavegacao.xhtml" />
-	<p:panel header="Gerencie uma tarefa especifica">
+	<p:panel header="Manipular uma tarefa especifica">
 		<h:form id="formAdicionarTarefa">
 			<p:messages closable="true">
 				<p:autoUpdate />
 			</p:messages>
 
-			<h:panelGrid id="gridAdicionar" columns="6" >
+			<h:panelGrid id="gridAdicionar" columns="8">
 				<p:outputLabel value="Titulo da tarefa: " />
 				<p:inputText value="#{tarefaBean.tarefa.titulo}" maxlength="50" />
 
@@ -73,15 +73,16 @@
 			<p:dataTable id="tabelaTarefas" value="#{tarefaBean.tarefas}"
 				var="tarefaAtual" emptyMessage="Nenhuma tarefa registrada"
 				paginator="true">
-				<p:column headerText="Numero">
+				<p:column headerText="Numero" width="80"
+					style=" text-align: center;">
 					#{tarefaAtual.numero}
 				</p:column>
 
-				<p:column headerText="Titulo">
+				<p:column headerText="Título">
 					#{tarefaAtual.titulo}
 				</p:column>
 
-				<p:column headerText="Descição">
+				<p:column headerText="Descrição">
 					#{tarefaAtual.descricao}
 				</p:column>
 
@@ -89,17 +90,18 @@
 					#{tarefaAtual.funcionario.idFuncionario} - #{tarefaAtual.funcionario.nome}
 				</p:column>
 
-				<p:column headerText="Prioridade">
+				<p:column headerText="Prioridade" width="120"
+					style=" text-align: center;">
 					#{tarefaAtual.prioridade}
 				</p:column>
 
-				<p:column headerText="Data">
+				<p:column headerText="Data" width="100" style=" text-align: center;">
 					<h:outputText value="#{tarefaAtual.deadLine}">
 						<f:convertDateTime type="localDate" pattern="dd/MM/yyyy" />
 					</h:outputText>
 				</p:column>
 
-				<p:column headerText="Opções">
+				<p:column headerText="Opções" width="120">
 					<p:commandButton value="Selecionar"
 						actionListener="#{tarefaBean.buscarTarefa(tarefaAtual)}"
 						update=":formAdicionarTarefa:gridAdicionar" />
