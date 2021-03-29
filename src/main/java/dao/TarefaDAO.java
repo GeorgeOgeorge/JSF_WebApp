@@ -81,7 +81,7 @@ public class TarefaDAO {
 	}
 	
 	public List<Tarefa> listarTarefasPrioridade(String prioridade) {
-		String jpql = "select t from Tarefa t where t.prioridade like "+prioridade+" order by numero";
+		String jpql = "select t from Tarefa t where t.prioridade like '%"+prioridade+"%' order by numero";
 		EntityManager sessao = JPAUtil.getEntityManager();
 		Query consulta = sessao.createQuery(jpql);
 		@SuppressWarnings("unchecked")
@@ -90,7 +90,7 @@ public class TarefaDAO {
 	}
 	
 	public List<Tarefa> listarTarefasFuncionario(Funcionario funcionario) {
-		String jpql = "select t from Tarefa t where t.funcionario_idfuncionario="+funcionario.getIdFuncionario()+" order by numero";
+		String jpql = "select t from Tarefa t where t.funcionario="+funcionario.getIdFuncionario()+" order by numero";
 		EntityManager sessao = JPAUtil.getEntityManager();
 		Query consulta = sessao.createQuery(jpql);
 		@SuppressWarnings("unchecked")

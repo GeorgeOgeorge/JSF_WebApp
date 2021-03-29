@@ -21,11 +21,11 @@
 				<p:autoUpdate />
 			</p:messages>
 
-			<h:panelGrid id="gridAdicionar" columns="6">
+			<h:panelGrid id="gridAdicionar" columns="6" >
 				<p:outputLabel value="Titulo da tarefa: " />
 				<p:inputText value="#{tarefaBean.tarefa.titulo}" maxlength="50" />
 
-				<p:outputLabel value="Descição da tarefa: " />
+				<p:outputLabel value="Descrição da tarefa: " />
 				<p:inputTextarea value="#{tarefaBean.tarefa.descricao}"
 					required="true" requiredMessage="Infomar descrição para tarefa" />
 

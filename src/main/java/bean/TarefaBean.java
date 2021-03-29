@@ -55,7 +55,6 @@ public class TarefaBean implements Serializable {
 	}
 
 	public void buscarTarefa(Tarefa tarefaSelecionada) {
-		Messages.addFlashGlobalInfo("Tarefa " + this.tarefa.getTitulo() + " selecionada");
 		this.tarefa = this.tarefaDAO.buscarTarefa(tarefaSelecionada.getNumero());
 	}
 	
@@ -85,28 +84,28 @@ public class TarefaBean implements Serializable {
 	}
 
 	public void listarTarefasStatus() {
-		Messages.addFlashGlobalInfo("Tarefa " + this.tarefa.getTitulo() + " listada por Status");
+		Messages.addFlashGlobalInfo("Tarefas listadas por Status");
 		this.tarefas = this.tarefaDAO.listarTarefasStatus(this.status);
 	}
 	
 	public void listarTarefasNumero() {
-		Messages.addFlashGlobalInfo("Tarefa " + this.tarefa.getTitulo() + " listada por Numero");
+		Messages.addFlashGlobalInfo("Tarefas listadas por Numero");
 		this.tarefas = this.tarefaDAO.listarTarefasNumero(this.numero);
 	}
 	
 	public void listarTarefasTitulo() {
-		Messages.addFlashGlobalInfo("Tarefa " + this.tarefa.getTitulo() + " listada por titulo");
+		Messages.addFlashGlobalInfo("Tarefas listadas por titulo");
 		this.tarefas = this.tarefaDAO.listarTarefasTitulo(this.titulo+"");
 	}
 	
 	public void listarTarefasPrioriade() {
-		Messages.addFlashGlobalInfo("Tarefa " + this.tarefa.getTitulo() + " listada por prioriade");
+		Messages.addFlashGlobalInfo("Tarefas listadas por prioriade");
 		this.tarefas = this.tarefaDAO.listarTarefasPrioridade(prioridade);
 	}
 	
 	public void listarTarefasFuncionario() {
-		Messages.addFlashGlobalInfo("Tarefa " + this.tarefa.getTitulo() + " listada por Funcionario");
-		this.tarefaDAO.listarTarefasFuncionario(this.funcionario);
+		Messages.addFlashGlobalInfo("Tarefas listadas por Funcionario");
+		this.tarefas = this.tarefaDAO.listarTarefasFuncionario(this.funcionario);
 	}
 
 }

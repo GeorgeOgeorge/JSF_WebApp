@@ -19,8 +19,8 @@
 		<p:messages closable="true">
 			<p:autoUpdate />
 		</p:messages>
-		
-		<p:panelGrid>
+
+		<p:panelGrid columns="2">
 			<h:form id="formStatus">
 				<p:outputLabel value="Status: " />
 				<p:selectOneMenu id="OneMenu" value="#{tarefaBean.status}">
@@ -34,7 +34,7 @@
 			</h:form>
 
 			<h:form>
-				<p:outputLabel value="Numero" />
+				<p:outputLabel value="Numero: " />
 				<p:inputText value="#{tarefaBean.numero}" />
 				<p:commandButton value="Buscar"
 					actionListener="#{tarefaBean.listarTarefasNumero()}"
@@ -42,7 +42,7 @@
 			</h:form>
 
 			<h:form>
-				<p:outputLabel value="Titulo" />
+				<p:outputLabel value="Titulo: " />
 				<p:inputText value="#{tarefaBean.titulo}" />
 				<p:commandButton value="Buscar"
 					actionListener="#{tarefaBean.listarTarefasTitulo()}"
@@ -50,10 +50,10 @@
 			</h:form>
 
 			<h:form>
-				<p:outputLabel value="Prioridade" />
+				<p:outputLabel value="Prioridade: " />
 				<p:selectOneMenu id="OneMenu" value="#{tarefaBean.prioridade}">
-					<f:selectItem itemLabel="Selecione uma prioridade"
-						itemDisabled="true" />
+					<f:selectItem itemDisabled="true"
+						itemLabel="Selecione uma prioridade" />
 					<f:selectItem itemLabel="baixa" itemValue="baixa" />
 					<f:selectItem itemLabel="média" itemValue="média" />
 					<f:selectItem itemLabel="alta" itemValue="alta" />
@@ -64,13 +64,19 @@
 			</h:form>
 
 			<h:form>
-				<p:outputLabel value="Responsavel" />
+				<p:outputLabel value="Responsavel: " />
+				<p:selectOneMenu value="#{tarefaBean.funcionario}"
+					converter="omnifaces.SelectItemsConverter">
+					<f:selectItem itemDisabled="true"
+						itemLabel="Selecione um funcionario" />
+					<f:selectItems value="#{tarefaBean.funcionarios}"
+						var="funcionarioAtual"
+						itemLabel="#{funcionarioAtual.idFuncionario} - #{funcionarioAtual.nome}" />
+				</p:selectOneMenu>
+				<p:commandButton value="Buscar"
+					actionListener="#{tarefaBean.listarTarefasFuncionario()}"
+					update=":formTabelaTarefas:tabelaTarefas" />
 			</h:form>
-
-
-			<h:form></h:form>
-			<h:form></h:form>
-			<h:form></h:form>
 		</p:panelGrid>
 
 		<h:form id="formTabelaTarefas">
