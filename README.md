@@ -23,7 +23,7 @@ Biblioteca que agiliza muitas das implementações que seriam realizadas
 ### [PrimeFaces](https://www.primefaces.org/)
 O PrimeFaces é uma biblioteca de componentes de interface de usuário de código-fonte aberto para aplicativos baseados em JavaServer Faces
 
-### [dependencias utilizadas] (https://github.com/GeorgeOgeorge/Projeto_Esig/blob/master/pom.xml)
+### [dependencias utilizadas](https://github.com/GeorgeOgeorge/Projeto_Esig/blob/master/pom.xml)
 -> hibernate-core 5.4.12.Final  
 
 -> postgresql 42.2.19  
