@@ -1,4 +1,4 @@
-# Projeto_ESIG
+# Projeto_WebApp
 Essa aplicação Java-Web de gerenciamento de dados foi implementada como requisito de participação em uma seleção de vagas de estágio para a ESIG. Nela foram utilizados conceitos do desenvolvimento em três camadas em conjunto com a implementação web, que por sua vez utiliza as tecnologias JSF e JPA .
 
 ## Programas, aplicações, bibliotecas e dependencias utilizadas
