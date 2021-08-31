@@ -1,71 +1,71 @@
-# Projeto_WebApp
-Essa aplicação Java-Web de gerenciamento de dados foi implementada como requisito de participação em uma seleção de vagas de estágio. Nela foram utilizados conceitos do desenvolvimento em três camadas em conjunto com a implementação web, que por sua vez utiliza as tecnologias JSF e JPA .
+# JSF_WebApp
+This Java-Web data management application was implemented as a requirement to participate in a selection of internship vacancies. In it, three-tier development concepts were used in conjunction with the web implementation, which in turn uses JSF and JPA technologies.
 
-## Programas, aplicações, bibliotecas e dependencias utilizadas
+## Programs, applications, libraries and dependencies used
 
-### [Java-8.0](https://www.java.com/pt-BR/download/help/whatis_java.html)
-Linguagem de programação utilizada
+### [Java-8.0](https://www.java.com/en-US/download/help/whatis_java.html)
+programming language used
 
 ### [Maven](https://maven.apache.org/index.html)
-Gerenciador de projetos que ajuda o desenvolvedor com o controle e manejamento das:
--> *Dependencias*
+Project manager that helps the developer with the control and management of:
+-> *Dependencies*
 -> Bilds
--> Documentação
--> Etc
+-> Documentation
+-> etc.
 
 ### [PostgreSQL](https://www.postgresql.org/)
-PostgreSQL é um sistema gerenciador de banco de dados objeto relacional.
+PostgreSQL is an object relational database manager system.
 
 ### [TomCat Apache](http://tomcat.apache.org/)
-O Tomcat é um servidor Java-Web, que implementa as tecnologias Java Servlet e JavaServer Pages, permitindo assim, que a aplicação esteja disponivel para coneção em Navegador. 
+Tomcat is a Java-Web server, which implements Java Servlet and JavaServer Pages technologies, thus allowing the application to be available for connection in Browser.
 
 ### [Lombok](https://projectlombok.org/)
-Biblioteca que agiliza muitas das implementações que seriam realizadas 
+Library that streamlines many of the implementations that would be performed
 *write less code more*
 
 ### [PrimeFaces](https://www.primefaces.org/)
-O PrimeFaces é uma biblioteca de componentes de interface de usuário de código-fonte aberto para aplicativos baseados em JavaServer Faces
+PrimeFaces is an open source UI component library for JavaServer Faces based applications
 
-### [dependencias utilizadas](https://github.com/GeorgeOgeorge/Projeto_Esig/blob/master/pom.xml)
--> hibernate-core 5.4.12.Final  
+### [dependencies used](https://github.com/GeorgeOgeorge/Projeto_Esig/blob/master/pom.xml)
+-> hibernate-core 5.4.12.Final
 
--> postgresql 42.2.19  
+-> postgresql 42.2.19
 
--> junit 4.13.2  
+-> junit 4.13.2
 
--> lombok 1.18.18  
+-> lombok 1.18.18
 
--> javax.faces 2.4.0  
+-> javax.faces 2.4.0
 
--> primefaces 8.0  
+-> primefaces 8.0
 
--> weld-servlet-core 3.1.4.Final  
+-> weld-servlet-core 3.1.4.Final
 
--> omnifaces 3.5  
+-> omnifaces 3.5
 
--> javax.validation validation-api 2.0.1.Final  
+-> javax.validation validation-api 2.0.1.Final
 
--> hibernate-validator 6.0.13.Final  
+-> hibernate-validator 6.0.13.Final
 
-## Telas e funcionalidades
-O Sistema possui quatro telas para que ocorra a manipulação dos dados, todas elas, disponiveis ao acesso por meio de uma barra de navegação
+## Screens and features
+The System has four screens for data manipulation, all of them available for access through a navigation bar
 
-### Tela de cadastro e manipulação de funcionarios
+### Screen of registration and handling of employees
 
-#### Cadastro
-Nesta tela é possível fazer o cadastro de um funcionário para que ele seja responsável por uma tarefa. O usuário deve informar um nome e telefone de um funcionário para cadastra-lo no sistema. O usuário não deve preocupar-se com a digitação de uma matrícula ou identificador, pois o próprio sistema ficará responsavel para garantir que dois funcionários não possuam o mesmo identificador. 
+#### Registration
+On this screen it is possible to register an employee so that he is responsible for a task. The user must provide the name and telephone number of an employee to register him or her in the system. The user should not be concerned with entering a registration number or identifier, as the system itself will be responsible for ensuring that two employees do not have the same identifier.
 
-#### Relatorio dos funcionarios cadastrados
-Sera possivel conferir todos os funcionarios cadastrados no sistema.
+#### Registered employees report
+It will be possible to check all employees registered in the system.
 
-#### Alterar e Excluir 
-Caso um dos funcionários exibidos na tabela, seja selecionado, o usuário poderá alterar os dados nas caixas de texto ou excluir o funcionário assim que o usuário pressione um dos botões.
+#### Change and Delete
+If one of the employees shown in the table is selected, the user can change the data in the text boxes or delete the employee as soon as the user presses one of the buttons.
 
-### Tela de cadastro de uma tarefa
-Nessa tela o usuário poderá cadastrar uma tarefa, assim como no funcionário, o controle do número de identificação fica por conta do sistema, assim como o estado de uma tarefa, que por sua vez sempre é *Em andamento* quando criada.
+### Screen for registering a task
+In this screen, the user can register a task, as well as in the employee, the control of the identification number is up to the system, as well as the status of a task, which in turn is always *In progress* when created.
 
-### Tela de manipulação de uma tarefa
-Tal qual a tabela de funcionários, o usuário poderá alterar os dados e excluir uma tarefa assim que selecionada, porem, o usuário também poderá marcar uma tarefa como *concluida*.  
+### Screen for handling a task
+Just like the employee table, the user can change the data and delete a task once selected, however, the user can also mark a task as *completed*.
 
-### Tela de relatorios das tarefas
-Nessa tela o usuário poderá utilizar os campos disponíveis para filtrar tarefas específicas.
+### Task Reports Screen
+On this screen, the user can use the available fields to filter specific tasks.
